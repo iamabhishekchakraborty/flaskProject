@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Git Checkout
-      uses: actions/checkout@main
+      uses: actions/checkout@master
 
     # Setup gcloud CLI
     - name: Set up gcloud command line interface
