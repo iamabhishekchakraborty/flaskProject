@@ -1,16 +1,16 @@
 name: cloudrun-deploy
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
+  
 jobs:
   setup-build-publish-deploy:
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
     steps:
     - name: Git Checkout
-      uses: actions/checkout@main
-
+      uses: actions/checkout@v2
     # Setup gcloud CLI
     - name: Set up gcloud command line interface
       uses: google-github-actions/setup-gcloud@master
